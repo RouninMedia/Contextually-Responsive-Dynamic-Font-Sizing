@@ -56,6 +56,7 @@ const adjustSidebarHeadingFontSizes = () => {
   let sidebar = document.querySelector('aside');
   let sidebarWidth = parseInt(window.getComputedStyle(sidebar).width.replace('px', ''));
   let sidebarHeadings = sidebar.querySelectorAll('h2');
+  let sidebarFontSize = parseInt(window.getComputedStyle(sidebarHeadings[0]).fontSize.replace('px', ''));
 
   for (let sidebarHeading of sidebarHeadings) {
   
@@ -64,7 +65,7 @@ const adjustSidebarHeadingFontSizes = () => {
     if (sidebarHeadingLength > (sidebarWidth / 10)) {
      
       let excessLength = (sidebarHeadingLength - (sidebarWidth / 10));
-      let sidebarHeadingFontSize = (18 - (excessLength / 2.3));      
+      let sidebarHeadingFontSize = (sidebarFontSize - (excessLength / 2.3));      
       sidebarHeading.classList.add('longHeading');
       sidebarHeading.style.setProperty('--sidebarHeadingFontSize', sidebarHeadingFontSize + 'px');
     }
