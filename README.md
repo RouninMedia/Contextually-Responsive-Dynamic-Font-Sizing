@@ -68,5 +68,12 @@ const adjustSidebarHeadingFontSizes = () => {
   }
 }
 
-adjustSidebarHeadingFontSizes();
+window.addEventListener('resize', adjustSidebarHeadingFontSizes);
+window.addEventListener('load', adjustSidebarHeadingFontSizes);
 ```
+
+________
+
+## Further Reading
+
+
