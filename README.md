@@ -79,6 +79,19 @@ ________
 
 ## Further Reading:
 
+Dynamically adjusting the font-size of headings of unpredictable length represents a very specific edge-case in Responsive Design for which there is no specific tool (apart from scripts like the one above).
+
+Many other Responsive Technologies are also already available - or, in the case of *CSS Container Queries* soon to be available:
+
+### Responsive Units (`%`, `em`, `vw`, `vh`, `vmin`, `vmax`)
+
+### Responsive Functions (`min()`, `max()`, `clamp()`)
+
+### Intrinsic Sizing ()
+
+### CSS @media queries
+
+### Container Queries (Coming Soon)
  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries
  - https://www.oddbird.net/2021/04/05/containerqueries/
 
