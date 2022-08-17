@@ -1,4 +1,4 @@
-# Element Relative Font Sizing
+# Contextually Dynamic Font Sizing
 *Font-sizing which decreases proportionate to the length of the text, so that titles, subtitles etc. never wrap*
 
 If we need to set a responsive `font-size` relative to the *viewport*, this is relatively straightforward:
