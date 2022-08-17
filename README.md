@@ -7,10 +7,10 @@ If we need to set a responsive `font-size` relative to the *viewport*, this is r
  - `font-size: 4vw` will set the `font-size` relative to the *viewport width* 
  - `font-size: 4vh` will set the `font-size` relative to the *viewport height*
 
-But what if you have a small piece of text *within an element* which can be anything from **8 to 40 characters**, and:
+But what if you have a small piece of text *within an element* which can be anything from **8 to 40 characters** (ie. it doesn't have a predictable width), and:
 
- i) you want (ideally) to maintain a `font-size: 18px` (or as close to that as possible) regardless of the length of the text
- ii) you want the element itself to be responsive: with a `width` sometimes `300px`, sometimes `50%` and sometimes `90vw`
+ i) you want (ideally) to maintain as close to `font-size: 18px` as possible, regardless of the length of the text
+ ii) you need the element *itself* to be responsive: depending on the viewport, the element `width` will sometimes be `300px`, sometimes `50%` and sometimes `90vw`
  
  _______
 
