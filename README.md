@@ -15,12 +15,28 @@ And what if the element itself, depending on responsive display, is sometimes `3
 ```html
 <aside>
  <h2>Sidebar Heading</h2>
+ <h2>Longer Sidebar Heading</h2>
+ <h2>Much Longer Sidebar Heading</h2>
+ <h2>Dramatically Longer Sidebar Heading</h2>
 </aside>
 ```
 
 ## CSS:
 ```css
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 300px;
+  padding: 12px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 127);
+}
+
 aside h2 {
+  margin: 0;
+  padding: 0;
   line-height: 27px;
   font-size: 18px;
 }
@@ -32,24 +48,25 @@ aside h2.longHeading {
 
 ## JS:
 ```js
-const adjustSideBarHeadingFontSizes = () => {
+const adjustSidebarHeadingFontSizes = () => {
 
   let sidebar = document.querySelector('aside');
   let sidebarWidth = parseInt(window.getComputedStyle(sidebar).width.replace('px', ''));
-  let sidebarHeadings = [...sidebar.querySelectorAll('h2')];
+  let sidebarHeadings = sidebar.querySelectorAll('h2');
 
-  for (let sideBarHeading of sideBarHeadings) {
+  for (let sidebarHeading of sidebarHeadings) {
+  
+    let sidebarHeadingLength = sidebarHeading.textContent.length;
 
-    if (sideBarHeading.length > (sidebarWidth / 10.5)) {
-        
-      let excessLength = (sideBarHeading.length - (sidebarWidth / 10.5));
-      let sideBarHeadingFontSize = (18 - (excessLength / 1.75))
-      sideBarHeading.classList.add('--longHeading');
-      sideBarHeading.style.setProperty('--sideBarHeadingFontSize', sideBarHeadingFontSize + 'px');
+    if (sidebarHeadingLength > (sidebarWidth / 10)) {
+     
+      let excessLength = (sidebarHeadingLength - (sidebarWidth / 10));
+      let sidebarHeadingFontSize = (18 - (excessLength / 2.3));      
+      sidebarHeading.classList.add('longHeading');
+      sidebarHeading.style.setProperty('--sidebarHeadingFontSize', sidebarHeadingFontSize + 'px');
     }
   }
 }
 
-window.addEventListener('resize', adjustSideBarHeadingFontSizes);
-window.addEventListener('load', adjustSideBarHeadingFontSizes);
+adjustSidebarHeadingFontSizes();
 ```
