@@ -80,5 +80,6 @@ ________
 ## Further Reading:
 
  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries
+ - https://www.oddbird.net/2021/04/05/containerqueries/
 
 
